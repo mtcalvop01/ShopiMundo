@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venta de móviles</title>
+  <meta name="description" content="Descripción breve de la página">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<style>
+  /* Ajusta el tamaño del carrusel y las imágenes */
+  .carousel {
+    max-height: 265px;  /* Más pequeño que antes (antes era 250px-300px) */
+    overflow: hidden;
+    background: #f8f9fa; /* Fondo por si la imagen no cubre todo */
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Sin recorte (usa 'cover' si prefieres que llene el espacio) */
+    max-height: 265px;   /* Altura máxima reducida */
+    padding: 10px;       /* Espacio interno para que no toquen los bordes */
+  }
+  
+  /* Opcional: Ajusta el margen entre tarjetas */
+  .card {
+    margin-bottom: 15px;
+    transition: transform 0.3s; /* Efecto hover opcional */
+  }
+  
+  .card:hover {
+    transform: scale(1.02); /* Pequeño zoom al pasar el mouse */
+  }
+
+  .navbar{
+    position: fixed;
+    background-color: #5fa8d3;
+    top:0;
+    width:100%;
+    /*Asegura que la barra se muestre por encima de otros elementos*/
+    z-index: 1000;
+  }
+
+  .nav-item{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-decoration: underline;
+  }
+
+  footer {
+    /*Alinea el texto horizontalmente dentro del elemento*/
+    text-align: center;
+    /*Define el espacio interno entre el contenido del elemento y sus bordes*/
+    padding: 10px 0;
+    /*Define el tamaño de la fuente del texto*/
+    font-size: 0.9em;
+    /*Establece el color del texto*/
+    color: black;
+    background-color: #5fa8d3;
+}
+
+ul li {
+    /*Define el margen que está alrededor del elemento*/
+    margin: 5px 0;
+    text-align: left;
+}
+
+button {
+    /*Establece el color del fondo*/
+    background-color:#5fa8d3 ;
+    /*Establece el color del texto*/
+    color: white;
+    /*Define el espacio interno entre el contenido del elemento y sus bordes*/
+    padding: 10px 20px;
+    /*Define el espacio en la parte superior de un elemento*/
+    margin-top: 20px;
+    /*Controla el borde de un elemento*/
+    border: none;
+    /*Redondea las esquinas de un elemento*/
+    border-radius: 5px;
+    /*Controla como se ve el puntero del ratón*/
+    cursor: pointer;
+}
+
+/*Aplica el color del fondo al botón*/
+button:hover {
+    /*Establece el color del fondo*/
+    background-color: #5fa8d3;
+}
+
+</style>
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand"><h3>ShopiMundo</h3></a>
+    <!--Botón Lateral-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--Contenido de la barra-->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="../Boostrap.html">Página Principal</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br><br><br>
+
+<!--Venta Apple-->
+<div id="ventaapple">
+  <section class="py-3 bg-light">
+    <h2 id="titulo1" class="text-center mb-5"><i class="bi bi-apple"></i>  VENTA DE MÓVILES APPLE</h2>
+    <div class="row justify-content-center px-4 px-md-5">
+
+      <!--Iphone 16-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouseliPhone16" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouseliPhone16" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouseliPhone16" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouseliPhone16" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouseliPhone16" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/iPhone16/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone16/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone16/imagen3.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone16/imagen4.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouseliPhone16" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouseliPhone16" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del producto-->
+          <div class="card-body">
+            <h5 class="card-title">iPhone 16<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla de 6.1 pulgadas, potente chip A18, cámara principal de 48 MP con sistema dual, variedad de colores disponibles y batería mejorada en comparación con la generación anterior.</p>
+            <details>
+              <summary>Ver características</summary>
+              <ul>
+                  <li><strong>Marca:</strong>Apple</li>
+                  <li><strong>Sistema operativo:</strong>iOS</li>
+                  <li><strong>Memoria RAM instalada:</strong> 8 GB</li>
+                  <li><strong>Capacidad de almacenamiento:</strong> 128 GB</li>
+                  <li><strong>Tamaño de pantalla:</strong>6,1 Pulgadas</li>
+                  <li><strong>Nombre del modelo:</strong>iPhone 16</li>
+                  <li><strong>Tecnología de móvil:</strong> 5G</li>
+                  <li><strong>Tecnología de conectividad:</strong>USB</li>
+              </ul>
+            </details>
+            <p><strong>Valoración:</strong> ★★★★☆</p>
+                <p>Precio: 940€</p>
+                <a href="../Pagos/pagoiPhone16.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!--Ipone 16 Plus-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouseliPhone16Plus" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouseliPhone16Plus" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouseliPhone16Plus" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouseliPhone16Plus" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouseliPhone16Plus" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/iPhone16Plus/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone16Plus/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone16Plus/imagen3.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone16Plus/imagen4.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouseliPhone16Plus" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouseliPhone16Plus" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del producto-->
+          <div class="card-body">
+            <h5 class="card-title">iPhone 16 Plus<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla Super Retina XDR OLED de 6,7", chip A18 Bionic para rendimiento excepcional, cámara principal de 50 MP con mejor zoom, diseño más delgado y ligero, y puerto USB-C avanzado.</p>
+            <details>
+              <summary>Ver características</summary>
+              <ul>
+                <li><strong>Marca:</strong>Apple</li>
+                <li><strong>Sistema operativo:</strong>iOS 18</li>
+                <li><strong>Memoria RAM instalada:</strong> 8 GB</li>
+                <li><strong>Capacidad de almacenamiento:</strong> 128 GB</li>
+                <li><strong>Tamaño de pantalla:</strong>6,7 Pulgadas</li>
+                <li><strong>Nombre del modelo:</strong>iPhone 16 Plus</li>
+                <li><strong>Tecnología de móvil:</strong> 5G</li>
+                <li><strong>Tecnología de conectividad:</strong>USB</li>
+              </ul>
+            </details>
+            <p><strong>Valoración:</strong> ★★★★☆</p>
+              <p>Precio: 909€</p>
+              <a href="../Pagos/pagoiPhone16Plus.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!--Iphone 16 Pro-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouseliPhone16Pro" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouseliPhone16Pro" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouseliPhone16Pro" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouseliPhone16Pro" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouseliPhone16Pro" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/iPhone16Pro/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone16Pro/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone16Pro/imagen3.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone16Pro/imagen4.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouseliPhone16Pro" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouseliPhone16Pro" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del Producto-->
+          <div class="card-body">
+            <h5 class="card-title">iPhone 16 Pro<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla OLED LTPO de 6.3 pulgadas con tasa de refresco de 120Hz y está potenciado por el procesador Apple A18 Pro con hasta 1TB de almacenamiento interno no expandible.</p>
+            <details>
+              <summary>Ver características</summary>
+              <ul>
+                <li><strong>Marca:</strong>Apple</li>
+                <li><strong>Sistema operativo:</strong>iOS</li>
+                <li><strong>Memoria RAM instalada:</strong> 8 GB</li>
+                <li><strong>Capacidad de almacenamiento:</strong> 128 GB</li>
+                <li><strong>Tamaño de pantalla:</strong>6,3 Pulgadas</li>
+                <li><strong>Nombre del modelo:</strong>iPhone 16 Pro</li>
+                <li><strong>Tecnología de móvil:</strong> 5G</li>
+                <li><strong>Tecnología de conectividad:</strong>USB</li>
+              </ul>
+          </details>
+          <p><strong>Valoración:</strong> ★★★★☆</p>
+          <p>Precio: 1.219€</p>
+          <a href="../Pagos/pagoiPhone16Pro.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!--Iphone 16 Pro Max-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouseliPhone16ProMax" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouseliPhone16ProMax" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouseliPhone16ProMax" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouseliPhone16ProMax" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouseliPhone16ProMax" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/iPhone16ProMax/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone16ProMax/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone16ProMax/imagen3.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone16ProMax/imagen4.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouseliPhone16ProMax" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouseliPhone16ProMax" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del Producto-->
+          <div class="card-body">
+            <h5 class="card-title">iPhone 16 Pro Max<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla OLED LTPO de 6.7 pulgadas con tasa de refresco de 120Hz y está potenciado por el procesador Apple A18 Pro con hasta 1TB de almacenamiento interno.</p>
+            <details>
+              <summary>Ver características</summary>
+                <ul>
+                  <li><strong>Marca:</strong>Apple</li>
+                  <li><strong>Sistema operativo:</strong>iOS 18</li>
+                  <li><strong>Memoria RAM instalada:</strong> 8 GB</li>
+                  <li><strong>Capacidad de almacenamiento:</strong> 128 GB</li>
+                  <li><strong>Tamaño de pantalla:</strong>6,7 Pulgadas</li>
+                  <li><strong>Nombre del modelo:</strong>iPhone 16 Pro Max</li>
+                  <li><strong>Tecnología de móvil:</strong> 5G</li>
+                  <li><strong>Tecnología de conectividad:</strong>USB</li>
+                </ul>
+            </details>
+            <p><strong>Valoración:</strong> ★★★★★</p>
+            <p>Precio: 1.599€</p>
+            <a href="../Pagos/pagoiPhone16ProMax.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+<!-------------------------------primera fila------------------------------>
+
+      <!--Iphone 15-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouseliPhone15" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouseliPhone15" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouseliPhone15" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouseliPhone15" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouseliPhone15" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/iPhone15/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone15/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone15/imagen3.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone15/imagen4.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouseliPhone15" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouseliPhone15" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del Producto-->
+          <div class="card-body">
+            <h5 class="card-title">iPhone 15<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla Super Retina XDR OLED de 6,1", chip A16 Bionic, cámara de 48 MP con retrato, Dynamic Island, diseño de aluminio y vidrio tintado, carga rápida por USB-C.</p>
+            <details>
+              <summary>Ver características</summary>
+              <ul>
+                <li><strong>Marca:</strong>Apple</li>
+                <li><strong>Sistema operativo:</strong>iOS 17</li>
+                <li><strong>Memoria RAM instalada:</strong> 6 GB</li>
+                <li><strong>Capacidad de almacenamiento:</strong> 128 GB</li>
+                <li><strong>Tamaño de pantalla:</strong>6,1 Pulgadas</li>
+                <li><strong>Nombre del modelo:</strong>iPhone 15</li>
+                <li><strong>Tecnología de móvil:</strong> 5G</li>
+                <li><strong>Tecnología de conectividad:</strong>USB</li>
+              </ul>
+            </details>
+            <p><strong>Valoración:</strong> ★★★★☆</p>
+            <p>Precio: 809€</p>
+            <a href="../Pagos/pagoiPhone15.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!--Iphone 15 Plus-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouseliPhone15Plus" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouseliPhone15Plus" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouseliPhone15Plus" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouseliPhone15Plus" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouseliPhone15Plus" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/iPhone15Plus/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone15Plus/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone15Plus/imagen3.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone15Plus/imagen4.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouseliPhone15Plus" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouseliPhone15Plus" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del Producto-->
+          <div class="card-body">
+            <h5 class="card-title">iPhone 15 Plus<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla Super Retina XDR OLED de 6,7", chip A16 Bionic, cámara de 48 MP con fotografía avanzada, Dynamic Island, diseño de aluminio y vidrio tintado, y puerto USB-C.</p>
+            <details>
+              <summary>Ver características</summary>
+              <ul>
+                <li><strong>Marca:</strong>Apple</li>
+                <li><strong>Sistema operativo:</strong>iOS 17</li>
+                <li><strong>Memoria RAM instalada:</strong> 6 GB</li>
+                <li><strong>Capacidad de almacenamiento:</strong> 128 GB</li>
+                <li><strong>Tamaño de pantalla:</strong>6,7 Pulgadas</li>
+                <li><strong>Nombre del modelo:</strong>iPhone 15 Plus</li>
+                <li><strong>Tecnología de móvil:</strong> 5G</li>
+                <li><strong>Tecnología de conectividad:</strong>USB</li>
+              </ul>
+            </details>
+            <p><strong>Valoración:</strong> ★★★★☆</p>
+            <p>Precio: 900€</p>
+            <a href="../Pagos/pagoiPhone15Plus.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!--Iphone 15 Pro-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouseliPhone15Pro" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouseliPhone15Pro" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouseliPhone15Pro" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouseliPhone15Pro" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouseliPhone15Pro" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/iPhone15Pro/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone15Pro/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone15Pro/imagen3.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone15Pro/imagen4.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouseliPhone15Pro" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouseliPhone15Pro" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del Producto-->
+          <div class="card-body">
+            <h5 class="card-title">iPhone 15 Pro<br><br><u>Descripción breve del producto:</u></h5>
+          <p class="card-text">Pantalla Super Retina XDR OLED de 6,1" con ProMotion a 120 Hz, chip A17 Pro, estructura de titanio, cámara de 48 MP con zoom, botón de acción y puerto USB-C con USB 3.</p>
+          <details>
+            <summary>Ver características</summary>
+            <ul>
+              <li><strong>Marca:</strong>Apple</li>
+              <li><strong>Sistema operativo:</strong>iOS 17</li>
+              <li><strong>Memoria RAM instalada:</strong> 8 GB</li>
+              <li><strong>Capacidad de almacenamiento:</strong> 128 GB</li>
+              <li><strong>Tamaño de pantalla:</strong>6,1 Pulgadas</li>
+              <li><strong>Nombre del modelo:</strong>iPhone 15 Pro</li>
+              <li><strong>Tecnología de móvil:</strong> 5G</li>
+              <li><strong>Tecnología de conectividad:</strong>USB</li>
+            </ul>
+          </details>
+          <p><strong>Valoración:</strong> ★★★★★</p>
+          <p>Precio: 1.120€</p>
+          <a href="../Pagos/pagoiPhone15Plus.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!--Iphone 15 Pro Max-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouseliPhone15ProMax" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouseliPhone15ProMax" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouseliPhone15ProMax" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouseliPhone15ProMax" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouseliPhone15ProMax" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/iPhone15ProMax/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone15ProMax/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone15ProMax/imagen3.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/iPhone15ProMax/imagen4.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouseliPhone15ProMax" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouseliPhone15ProMax" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del Producto-->
+          <div class="card-body">
+            <h5 class="card-title">iPhone 15 Pro Max<br><br><u>Descripción breve del producto:</u></h5>
+          <p class="card-text">Pantalla Super Retina XDR OLED de 6,7" con ProMotion a 120 Hz, chip A17 Pro, estructura de titanio, cámara de 48 MP con teleobjetivo 5x, botón de acción y puerto USB-C con USB 3.</p>
+          <details>
+            <summary>Ver características</summary>
+            <ul>
+              <li><strong>Marca:</strong>Apple</li>
+              <li><strong>Sistema operativo:</strong>iOS 17</li>
+              <li><strong>Memoria RAM instalada:</strong> 8 GB</li>
+              <li><strong>Capacidad de almacenamiento:</strong> 128 GB</li>
+              <li><strong>Tamaño de pantalla:</strong>6,7 Pulgadas</li>
+              <li><strong>Nombre del modelo:</strong>iPhone 15 Pro Max</li>
+              <li><strong>Tecnología de móvil:</strong> 5G</li>
+              <li><strong>Tecnología de conectividad:</strong>USB</li>
+            </ul>
+          </details>
+          <p><strong>Valoración:</strong> ★★★★★</p>
+          <p>Precio: 1.469€</p>
+          <a href="../Pagos/pagoiPhone15ProMax.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+<!------------------------------Segunda fila------------------------------->
+  </section>
+</div>
+
+<!------------------------------Segunda sección----------------------------->
+<!--Venta Android-->
+<div id="ventandroid">
+  <section class="py-3 bg-light">
+    <br>
+    <h2 id="titulo2" class="text-center mb-5"><i class="bi bi-android2"></i>  VENTA DE MÓVILES ANDROID</h2>
+    <div class="row justify-content-center px-4 px-md-5">
+
+    <!--Xiaomi Mi 11-->
+    <div class="col-md-3 col-12 mb-4">
+      <div class="card h-100 text-center border-info-subtle border-2">
+        <!--Carrusel de Imágenes-->
+        <div id="carouselxiaomimi11" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselxiaomimi11" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselxiaomimi11" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselxiaomimi11" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselxiaomimi11" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../imagenes/XiaomiMi11/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+              <img src="../imagenes/XiaomiMi11/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+            </div>
+            <div class="carousel-item">
+              <img src="../imagenes/XiaomiMi11/imagen3.jpg" class="d-block w-100" alt="Imagen 3">
+            </div>
+            <div class="carousel-item">
+              <img src="../imagenes/XiaomiMi11/imagen4.jpg" class="d-block w-100" alt="Imagen 3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselxiaomimi11" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselxiaomimi11" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!--Información del Producto-->
+        <div class="card-body">
+          <h5 class="card-title">Xiaomi Mi 11<br><br><u>Descripción breve del producto:</u></h5>
+          <p class="card-text">Pantalla AMOLED de 6.67 pulgadas, procesador Snapdragon 732G, y cámara cuádruple de 108 MP para fotos de alta calidad.</p>
+          <details>
+            <summary>Ver características</summary>
+            <ul>
+              <li><strong>Marca:</strong>Xiaomi</li>
+              <li><strong>Sistema operativo:</strong>MIUI basado en Android</li>
+              <li><strong>Memoria RAM instalada:</strong> 6 GB</li>
+              <li><strong>Capacidad de almacenamiento:</strong> 64 GB</li>
+              <li><strong>Tamaño de pantalla:</strong>6,4 Pulgadas</li>
+              <li><strong>Nombre del modelo:</strong>Xiaomi Redmi Note 10 Pro</li>
+              <li><strong>Tecnología de móvil:</strong> 4G</li>
+              <li><strong>Tecnología de conectividad:</strong>USB-C</li>
+            </ul>
+          </details>
+          <p><strong>Valoración:</strong> ★★★★☆</p>
+          <p>Precio: 299€</p>
+          <a href="../Pagos/pagoXiaomiMI11.html" target="blank"> <button>Comprar</button></a>
+        </div>
+      </div>
+    </div>
+      
+    <!--Xiaomi Mi 9T Pro-->
+    <div class="col-md-3 col-12 mb-4">
+      <div class="card h-100 text-center border-info-subtle border-2">
+        <!--Carrusel de Imágenes-->
+        <div id="carouselxiaomimi9tpro" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselxiaomimi9tpro" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselxiaomimi9tpro" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselxiaomimi9tpro" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselxiaomimi9tpro" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/XiaomiMi9TPro/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/XiaomiMi9TPro/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/XiaomiMi9TPro/imagen3.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/XiaomiMi9TPro/imagen4.webp" class="d-block w-100" alt="Imagen 3">
+              </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselxiaomimi9tpro" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselxiaomimi9tpro" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <!--Información del Producto-->
+            <div class="card-body">
+              <h5 class="card-title">Xiaomi Mi 9T Pro<br><br><u>Descripción breve del producto:</u></h5>
+              <p class="card-text">Pantalla AMOLED de 6.39 pulgadas, potente procesador Snapdragon 855 y cámara de 48 MP para fotos y videos excelentes.</p>
+              <details>
+                <summary>Ver características</summary>
+                <ul>
+                  <li><strong>Marca:</strong>Xiaomi</li>
+                  <li><strong>Sistema operativo:</strong>MIUI basado en Android</li>
+                  <li><strong>Memoria RAM instalada:</strong> 6 GB</li>
+                  <li><strong>Capacidad de almacenamiento:</strong> 64 GB</li>
+                  <li><strong>Tamaño de pantalla:</strong>6,39 Pulgadas</li>
+                  <li><strong>Nombre del modelo:</strong>Xiaomi Mi 9T Pro</li>
+                  <li><strong>Tecnología de móvil:</strong> 4G</li>
+                  <li><strong>Tecnología de conectividad:</strong>USB-C</li>
+                </ul>
+              </details>
+              <p><strong>Valoración:</strong> ★★★★☆</p>
+              <p>Precio: 349€</p>
+              <a href="../Pagos/pagoXiaomiMi9TPro.html" target="blank"> <button>Comprar</button></a>
+            </div>
+          </div>
+        </div>
+      
+        <!--Xiaomi Poco X3 Pro-->
+        <div class="col-md-3 col-12 mb-4">
+          <div class="card h-100 text-center border-info-subtle border-2">
+            <!--Carrusel de Imágenes-->
+            <div id="carouselxiaomipocox3pro" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselxiaomipocox3pro" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselxiaomipocox3pro" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselxiaomipocox3pro" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselxiaomipocox3pro" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/XiaomiPocoX3/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/XiaomiPocoX3/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/XiaomiPocoX3/imagen3.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/XiaomiPocoX3/imagen4.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselxiaomipocox3pro" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselxiaomipocox3pro" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del Producto-->
+          <div class="card-body">
+            <h5 class="card-title">Xiaomi Poco X3 Pro<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla IPS LCD de 6.67 pulgadas, potente procesador Snapdragon 860 y batería de 5160 mAh que ofrece excelente autonomía.</p>
+          <details>
+          <summary>Ver características</summary>
+            <ul>
+              <li><strong>Marca:</strong>Xiaomi</li>
+              <li><strong>Sistema operativo:</strong>MIUI basado en Android</li>
+              <li><strong>Memoria RAM instalada:</strong> 6 GB</li>
+              <li><strong>Capacidad de almacenamiento:</strong> 128 GB</li>
+              <li><strong>Tamaño de pantalla:</strong>6,67 Pulgadas</li>
+              <li><strong>Nombre del modelo:</strong>Xiaomi Poco X3 Pro</li>
+              <li><strong>Tecnología de móvil:</strong> 4G</li>
+              <li><strong>Tecnología de conectividad:</strong>USB-C</li>
+            </ul>
+          </details>
+          <p><strong>Valoración:</strong> ★★★★★</p>
+          <p>Precio: 249€</p>
+          <a href="../Pagos/pagoXiaomiPocoX3Pro.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+      
+      <!--Xiaomi Mi 10-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouselxiaomimi10" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselxiaomimi10" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselxiaomimi10" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselxiaomimi10" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselxiaomimi10" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/XiaomiMi10/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/XiaomiMi10/imagen2.webp" class="d-block w-100" alt="Imagen 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/XiaomiMi10/imagen3.avif" class="d-block w-100" alt="Imagen 3">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/XiaomiMi10/imagen4.jpg" class="d-block w-100" alt="Imagen 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselxiaomimi10" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselxiaomimi10" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del Producto-->
+          <div class="card-body">
+            <h5 class="card-title">Xiaomi Mi 10<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla AMOLED de 6.67 pulgadas, Snapdragon 865, y cámaras de 108 MP para capturar imágenes nítidas y detalladas.</p>
+            <details>
+              <summary>Ver características</summary>
+              <ul>
+                <li><strong>Marca:</strong>Xiaomi</li>
+              <li><strong>Sistema operativo:</strong>MIUI basado en Android</li>
+              <li><strong>Memoria RAM instalada:</strong> 8 GB</li>
+              <li><strong>Capacidad de almacenamiento:</strong> 128 GB</li>
+              <li><strong>Tamaño de pantalla:</strong>6,67 Pulgadas</li>
+              <li><strong>Nombre del modelo:</strong>Xiaomi Mi 10</li>
+              <li><strong>Tecnología de móvil:</strong> 5G</li>
+              <li><strong>Tecnología de conectividad:</strong>USB-C</li>
+              </ul>
+            </details>
+            <p><strong>Valoración:</strong> ★★★★★</p>
+            <p>Precio: 669€</p>
+            <a href="../Pagos/pagoXiaomiMi10.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+  </section>
+</div>
+<br>
+
+    
+<footer><br>
+  <p><i class="bi bi-c-circle"></i>  2025 ShopiMundo. Todos los derechos reservados.<br>
+  <i class="bi bi-telephone"></i>  924 48 68 59 <br>
+  <i class="bi bi-envelope-at"></i>  shopimundo12@gmail.com<br>
+  <i class="bi bi-instagram"></i>  @shopimundo_</p>
+</footer>
+  
+</body>
+</html>

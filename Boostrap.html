@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Web</title>
+  <meta name="description" content="Descripción breve de la página">
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<style>
+  body{
+    background-color: #cae9ff;
+    padding-top: 7%;
+  }
+  
+  .carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: #5fa8d3;
+  }
+
+  .navbar{
+    position: fixed;
+    background-color: white;
+    top:0;
+    width:100%;
+    /*Asegura que la barra se muestre por encima de otros elementos*/
+    z-index: 1000;
+  }
+
+  .nav-item{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-decoration: underline;
+  }
+
+  .carousel{
+    padding-top: 2%;
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 320px;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.flip-card-front img {
+  height: 150px;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background-color: #f8f9fa;
+}
+
+footer {
+    /*Alinea el texto horizontalmente dentro del elemento*/
+    text-align: center;
+    /*Define el espacio interno entre el contenido del elemento y sus bordes*/
+    padding: 10px 0;
+    /*Define el tamaño de la fuente del texto*/
+    font-size: 0.9em;
+    /*Establece el color del texto*/
+    color: #777;
+}
+
+</style>
+<body>
+
+  <h3 class="text-center"><em>!Bienvenido a ShopiMundo!</em></h3>
+  <p class="eslogan text-center small mt-3"><em><u>Tu tienda en el bolsillo, compras en un clic</u></em></p>
+
+
+  <!--Barra de Navegación-->
+  <nav id="navbar-inicial" class="navbar navbar-expand-lg bg-body-tertiary px-3 mb-3">
+    <div class="container-fluid">
+      <a class="navbar-brand"><h3>ShopiMundo</h3></a>
+
+      <!--Botón lateral-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <!--Contenido de la Barra-->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Portada</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#titulo1">Sobre Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#titulo2">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#titulo3">Nuestro Equipo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#titulo4">Formulario de Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Carrusel de Fotos-->
+  <div id="carouselExampleIndicators" class="carousel slide mi-carrusel">
+    <!--Rayas de abajo del carrusel-->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!--Cargar las fotos al carrusel-->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./imagenes/logo.jpg" class="d-block mx-auto" alt="logo" height="500px">
+      </div>
+      <div class="carousel-item">
+        <img src="./imagenes/puesto.avif" class="d-block mx-auto" alt="puestoventa" height="500px">
+      </div>
+      <div class="carousel-item">
+        <img src="./imagenes/moviles.jpg" class="d-block mx-auto" alt="moviles" height="500px">
+      </div>
+    </div>
+
+    <!--Botones Laterales-->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+  
+  <br>
+  <br>
+
+  <!--Sobre Nosotros-->
+  <div id="sobrenosotros">
+    <section class="py-3 bg-light">
+      <br>
+      <h2 id="titulo1" class="text-center mb-5"><i class="bi bi-shop"></i>  SOBRE NOSOTROS</h2>
+      <div class="row justify-content-center px-4 px-md-5">
+
+        <!--¿Quiénes Somos?-->
+        <div class="col-md-3 mb-4">
+          <div class="card h-100 text-center border-info-subtle border-2">
+            <img src="./imagenes/quienessomos.png" class="card-imp-top" alt="quienes somos">
+            <div class="card-body">
+              <h5 class="card-title">¿Quiénes somos?</h5>
+              <p class="card-text">Somos una tienda online comprometida con ofrecer productos de calidad, accesibles desde cualquier lugar.</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Nuestros Productos-->
+        <div class="col-md-3 mb-4">
+          <div class="card h-100 text-center border-info-subtle border-2">
+            <img src="./imagenes/nuestrosproductos.jpg" class="card-img-top" alt="nuestros productos">
+            <div class="card-title">
+              <h5 class="card-title">Nuestros Productos</h5>
+              <p class="card-text">Ofrecemos una amplia variedad de productos, desde tecnología innovadora hasta artículos de moda, siempre buscando lo mejor para ti.</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Nuestros Servicios-->
+        <div class="col-md-3 mb-4">
+          <div class="card h-100 text-center border-info-subtle border-2">
+            <img src="./imagenes/nuestrosservicios.webp" class="card-img-top" alt="nuestros servicios">
+            <div class="card-title">
+              <h5 class="card-title">Nuestros Servicios</h5>
+              <p class="card-text">Ofrecemos envíos rápidos y seguros para que tu experiencia de compra sea cómoda y confiable.</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Nuestro Equipo-->
+        <div class="col-md-3 mb-4">
+          <div class="card h-100 text-center border-info-subtle border-2">
+            <img src="./imagenes/nuestroequipo.jpg" class="card-img-top" alt="nuestro equipo">
+            <div class="card-title">
+              <h5 class="card-title">Nuestro Equipo</h5>
+              <p class="card-text">Un equipo apasionado por la tecnología y el servicio al cliente, siempre dispuesto a ayudarte.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+  <br>
+<!-- Servicios/Productos -->
+<br>
+<h2 id="titulo2" class="text-center mb-5"><i class="bi bi-basket3"></i> NUESTROS SERVICIOS Y PRODUCTOS</h2>
+
+<div class="container my-5">
+  <div class="row justify-content-center g-4">
+
+    <!-- GRUPO 1: SERVICIOS DE REPARACIÓN -->
+    <!-- Reparación Pantallas -->
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front d-flex flex-column">
+            <img src="./imagenes/arreglopantalla.jpeg" alt="arreglo pantalla">
+            <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1">
+              <h5 class="mt-2">Reparación de Pantallas</h5>
+              <a href="./Servicios y Productos/repararpantalla.html">
+                <button class="btn btn-secondary mt-2">Elegir servicio</button>
+              </a>
+            </div>
+          </div>
+          <div class="flip-card-back d-flex align-items-center justify-content-center text-center p-3">
+            <p>Reparamos pantallas de móviles, tablets y portátiles con piezas originales. Si tu pantalla está rota o presenta problemas táctiles, nuestro equipo de expertos te ofrece una solución rápida y profesional para que tu dispositivo quede como nuevo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reparación Altavoces -->
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front d-flex flex-column">
+            <img src="./imagenes/reparacionaltavoces.jpeg" alt="reparacion altavoces">
+            <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1">
+              <h5 class="mt-2">Reparación de Altavoces</h5>
+              <a href="./Servicios y Productos/repararaltavoces.html">
+                <button class="btn btn-secondary mt-2">Elegir servicio</button>
+              </a>
+            </div>
+          </div>
+          <div class="flip-card-back d-flex align-items-center justify-content-center text-center p-3">
+            <p>Solucionamos fallos de sonido, vibración o distorsión en altavoces de móviles, tablets y otros dispositivos electrónicos. Utilizamos piezas de alta calidad y nos aseguramos de que tu dispositivo vuelva a ofrecer un sonido claro y sin interrupciones.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reparación Cámaras -->
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front d-flex flex-column">
+            <img src="./imagenes/reparacioncamara.jpg" alt="reparacion camara">
+            <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1">
+              <h5 class="mt-2">Reparación de Cámaras</h5>
+              <a href="./Servicios y Productos/repararcamara.html">
+                <button class="btn btn-secondary mt-2">Elegir servicio</button>
+              </a>
+            </div>
+          </div>
+          <div class="flip-card-back d-flex align-items-center justify-content-center text-center p-3">
+            <p>Reparamos lentes rotas, sensores dañados o problemas de enfoque. Si tienes problemas con la cámara de tu móvil o tablet, te ayudamos a restaurarla con la máxima precisión para que puedas capturar tus momentos favoritos nuevamente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reparación Batería -->
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front d-flex flex-column">
+            <img src="./imagenes/reparacionbateria.webp" alt="reparacion bateria">
+            <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1">
+              <h5 class="mt-2">Reparación de Batería</h5>
+              <a href="./Servicios y Productos/repararbateria.html">
+                <button class="btn btn-secondary mt-2">Elegir servicio</button>
+              </a>
+            </div>
+          </div>
+          <div class="flip-card-back d-flex align-items-center justify-content-center text-center p-3">
+            <p>Recambios de batería y calibración profesional para más duración. Si tu batería se descarga rápidamente o no carga correctamente, ofrecemos un servicio rápido para sustituirla y optimizar el rendimiento de tu dispositivo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRUPO 2: VENTA DE PRODUCTOS -->
+    <!-- Venta Móviles -->
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front d-flex flex-column">
+            <img src="./imagenes/moviles1.jpeg" alt="venta móviles">
+            <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1">
+              <h5 class="mt-2">Venta de Móviles</h5>
+              <a href="./Servicios y Productos/ventamoviles.html">
+                <button class="btn btn-secondary mt-2">Elegir producto</button>
+              </a>
+            </div>
+          </div>
+          <div class="flip-card-back d-flex align-items-center justify-content-center text-center p-3">
+            <p>Modelos nuevos y reacondicionados con garantía.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Venta Ordenadores -->
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front d-flex flex-column">
+            <img src="./imagenes/ordenadores.jpeg" alt="venta ordenadores">
+            <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1">
+              <h5 class="mt-2">Venta de Portátiles</h5>
+              <a href="./Servicios y Productos/ventaordenadores.html">
+                <button class="btn btn-secondary mt-2">Elegir producto</button>
+              </a>
+            </div>
+          </div>
+          <div class="flip-card-back d-flex align-items-center justify-content-center text-center p-3">
+            <p>Portátiles y sobremesas listos para trabajar o jugar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Venta Tablets -->
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front d-flex flex-column">
+            <img src="./imagenes/tablets.jpeg" alt="venta tablets">
+            <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1">
+              <h5 class="mt-2">Venta de Tablets</h5>
+              <a href="./Servicios y Productos/ventatablets.html">
+                <button class="btn btn-secondary mt-2">Elegir producto</button>
+              </a>
+            </div>
+          </div>
+          <div class="flip-card-back d-flex align-items-center justify-content-center text-center p-3">
+            <p>Gran variedad de tablets para estudio, dibujo o trabajo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Venta Relojes -->
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front d-flex flex-column">
+            <img src="./imagenes/relojes.jpeg" alt="venta relojes">
+            <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1">
+              <h5 class="mt-2">Venta de Smartwatch</h5>
+              <a href="./Servicios y Productos/ventarelojes.html">
+                <button class="btn btn-secondary mt-2">Elegir producto</button>
+              </a>
+            </div>
+          </div>
+          <div class="flip-card-back d-flex align-items-center justify-content-center text-center p-3">
+            <p>Controla tu salud y notificaciones con estilo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Nuestro Equipo -->
+<div class="nuestroequipo">
+  <section class="py-3 bg-light">
+    <br>
+    <h2 id="titulo3" class="text-center mb-5"><i class="bi bi-person-vcard"></i>  NUESTRO EQUIPO</h2>
+    <div class="row justify-content-center g-4 px-4 px-md-5">
+
+      <!-- Trabajadora (Laura Martín) -->
+      <div class="col-md-4">
+        <div class="card h-100 border-info-subtle border-2">
+          <div class="row g-0">
+            <div class="col-4">
+              <img src="./imagenes/lauratrabajadora.jpg" class="img-fluid rounded-circle" alt="Laura Martín">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">Laura Martín</h5>
+                <p class="card-text">Directora y Fundadora</p>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Apasionada por el e-commerce y la innovación digital. Lidera el equipo desde 2020 con una visión clara de crecimiento y servicio.">
+                  + Información
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trabajador (Carlos López) -->
+      <div class="col-md-4">
+        <div class="card h-100 border-info-subtle border-2">
+          <div class="row g-0">
+            <div class="col-4">
+              <img src="./imagenes/trabajador2.jpg" class="img-fluid rounded-circle" alt="Carlos López">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">Carlos López</h5>
+                <p class="card-text">Encargado de la Logística</p>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Responsable de coordinar los envíos y garantizar entregas rápidas y eficientes. Experto en operaciones y distribución.">
+                  + Información
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trabajadora (Ana Gómez) -->
+      <div class="col-md-4">
+        <div class="card h-100 border-info-subtle border-2">
+          <div class="row g-0">
+            <div class="col-4">
+              <img src="./imagenes/atencionalcliente1.jpg" class="img-fluid rounded-circle" alt="Ana Gómez">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <h5 class="card-title">Ana Gómez</h5>
+                <p class="card-text">Atención al Cliente</p>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="La voz amable de nuestras respuestas. Brinda soporte durante las 24 horas y se especializa en relaciones públicas, siempre lista para ayudarte con una sonrisa.">
+                  + Información
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br>
+  </section>
+</div>
+
+<!--Formulario de Contacto-->
+<br><br>
+<h2 id="titulo4" class="text-center mb-5">FORMULARIO DE CONTACTO</h2>
+<div class="row justify-content-center">
+  <div class="col-md-6">
+
+  <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post" target="_blank" class="needs-validation" novalidate>
+    <div class="mb-3">
+      <label for="nombre" class="form-label"><i class="bi bi-person-circle"></i>  Nombre:</label>
+      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+      <div class="valid-feedback">
+        Nombre Correcto.
+      </div>
+      <div class="invalid-feedback">
+        Es necesario poner el nombre.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="apellido" class="form-label"><i class="bi bi-person-circle"></i>  Apellidos:</label>
+      <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Tus apellidos" required>
+      <div class="valid-feedback">
+        Apellidos Correcto.
+      </div>
+      <div class="invalid-feedback">
+        Es necesario poner los apellidos.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label"><i class="bi bi-envelope-at"></i>  Correo Electrónico:</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="correo@empresa.com" required>
+      <div class="valid-feedback">
+        Email Correcto.
+      </div>
+      <div class="invalid-feedback">
+        Es necesario poner el email.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="tipo-consulta" class="form-label"><i class="bi bi-keyboard"></i>  Asunto:</label>
+      <select class="form-select" id="tipo-consulta" name="tipo-consulta" required>
+        <option value="" disabled selected>Seleccione un asunto...</option>
+        <option value="productos">Consulta sobre productos</option>
+        <option value="soporte">Soporte técnico</option>
+        <option value="otros">Otros</option>
+      </select>
+      <div class="valid-feedback">
+        Asunto Correcto.
+      </div>
+      <div class="invalid-feedback">
+        Es necesario marcar un asunto.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="mensaje" class="form-label"><i class="bi bi-envelope-open"></i>  Mensaje:</label>
+      <textarea class="form-control" id="mensaje" name="mensaje" rows="2" required></textarea>
+      <div class="valid-feedback">
+        Mensaje Correcto.
+      </div>
+      <div class="invalid-feedback">
+        Es necesario escribir un mensaje.
+      </div>
+    </div>
+
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="condicion" name="condiciones" required>
+      <label class="form-check-label" for="condicion">He leído y acepto el aviso legal y la política de privacidad.</label>
+      <div class="valid-feedback">
+        Marcado Correcto.
+      </div>
+      <div class="invalid-feedback">
+        Es necesario aceptar la política de privacidad.
+      </div>
+    </div>
+
+    <div id="alertaError" class="alert alert-danger d-none" role="alert">
+      Por favor, completa todos los campos correctamente.
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+  </div>
+  <script>
+    /*Validación Formulario*/
+  (() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation');
+  let alertaError = document.getElementById('alertaError');
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+        alertaError.classList.remove('d-none');
+      }
+      else{
+        alert('El formulario ha sido enviado correctamente')
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})();
+/*Popover*/
+document.querySelectorAll('[data-bs-toggle="popover"]').forEach(el => {
+  new bootstrap.Popover(el);
+});
+  </script>
+</div>
+<br>
+
+<section class="py-3 bg-light">
+<footer><br>
+  <p><i class="bi bi-c-circle"></i>  2025 ShopiMundo. Todos los derechos reservados.<br>
+  <i class="bi bi-telephone"></i>  924 48 68 59 <br>
+  <i class="bi bi-envelope-at"></i>  shopimundo12@gmail.com<br>
+  <i class="bi bi-instagram"></i>  @shopimundo_</p>
+</footer>
+</section>
+</body>

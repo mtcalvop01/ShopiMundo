@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venta de Ordenadores</title>
+  <meta name="description" content="Descripción breve de la página">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<style>
+/* Ajusta el tamaño del carrusel y las imágenes */
+.carousel {
+    max-height: 265px;  /* Más pequeño que antes (antes era 250px-300px) */
+    overflow: hidden;
+    background: #f8f9fa; /* Fondo por si la imagen no cubre todo */
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Sin recorte (usa 'cover' si prefieres que llene el espacio) */
+    max-height: 265px;   /* Altura máxima reducida */
+    padding: 10px;       /* Espacio interno para que no toquen los bordes */
+  }
+  
+  /* Opcional: Ajusta el margen entre tarjetas */
+  .card {
+    margin-bottom: 15px;
+    transition: transform 0.3s; /* Efecto hover opcional */
+  }
+  
+  .card:hover {
+    transform: scale(1.02); /* Pequeño zoom al pasar el mouse */
+  }
+
+  .navbar{
+    position: fixed;
+    background-color: #5fa8d3;
+    top:0;
+    width:100%;
+    /*Asegura que la barra se muestre por encima de otros elementos*/
+    z-index: 1000;
+  }
+
+  .nav-item{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-decoration: underline;
+  }
+
+  footer {
+    /*Alinea el texto horizontalmente dentro del elemento*/
+    text-align: center;
+    /*Define el espacio interno entre el contenido del elemento y sus bordes*/
+    padding: 10px 0;
+    /*Define el tamaño de la fuente del texto*/
+    font-size: 0.9em;
+    /*Establece el color del texto*/
+    color: black;
+    background-color: #5fa8d3;
+}
+
+ul li {
+    /*Define el margen que está alrededor del elemento*/
+    margin: 5px 0;
+    text-align: left;
+}
+
+button {
+    /*Establece el color del fondo*/
+    background-color:#5fa8d3 ;
+    /*Establece el color del texto*/
+    color: white;
+    /*Define el espacio interno entre el contenido del elemento y sus bordes*/
+    padding: 10px 20px;
+    /*Define el espacio en la parte superior de un elemento*/
+    margin-top: 20px;
+    /*Controla el borde de un elemento*/
+    border: none;
+    /*Redondea las esquinas de un elemento*/
+    border-radius: 5px;
+    /*Controla como se ve el puntero del ratón*/
+    cursor: pointer;
+}
+
+/*Aplica el color del fondo al botón*/
+button:hover {
+    /*Establece el color del fondo*/
+    background-color: #5fa8d3;
+}
+
+</style>
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand"><h3>ShopiMundo</h3></a>
+    <!--Botón Lateral-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--Contenido de la barra-->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="../Boostrap.html">Página Principal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#titulo1">Venta Apple</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#titulo2">Venta Android</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br><br><br>
+
+<!--Venta Apple-->
+<div id="ventaapple">
+  <section class="py-3 bg-light">
+    <h2 id="titulo1" class="text-center mb-5"><i class="bi bi-apple"></i>  VENTA DE PORTÁTILES APPLE</h2>
+    <div class="row justify-content-center px-4 px-md-5">
+
+      <!--Apple MacBook Pro de 16 pulgadas-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouselmackbookpro" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselmackbookpro" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselmackbookpro" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/Apple MacBook Pro/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/Apple MacBook Pro/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselmackbookpro" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselmackbookpro" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del producto-->
+          <div class="card-body">
+            <h5 class="card-title">Apple MacBook Pro de 16 pulgadas<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla Liquid Retina XDR de 16,2 pulgadas con resolución de 3456 x 2234 píxeles y brillo máximo de 1600 nits. Equipado con el chip Apple M3 Max de 16 núcleos de CPU y 40 núcleos de GPU, junto con 48 GB de memoria unificada y 1 TB de almacenamiento SSD.</p>
+            <details>
+            <summary>Ver características</summary>
+              <ul>
+                <li><strong>Marca:</strong>Apple</li>
+                <li><strong>Sistema operativo:</strong>macOS Sonoma</li>
+                <li><strong>Memoria RAM instalada:</strong>48 GB unificada</li>
+                <li><strong>Capacidad de almacenamiento:</strong>1 TB SSD</li>
+                <li><strong>Tamaño de pantalla:</strong>16,2 pulgadas</li>
+                <li><strong>Nombre del modelo:</strong>MacBook Pro 16" M3 Max</li>
+                <li><strong>Procesador:</strong>Apple M3 Max (16 núcleos CPU, 40 núcleos GPU)</li>
+                <li><strong>Conectividad:</strong>Wi-Fi 6E, Bluetooth 5.3</li>
+                <li><strong>Puertos:</strong>3 x Thunderbolt 4 (USB-C), 1 x HDMI, lector de tarjetas SDXC, MagSafe 3, conector de auriculares de 3,5 mm</li>
+                <li><strong>Peso:</strong>2,16 kg</li>
+                <li><strong>Color:</strong>Plata</li>
+              </ul>
+            </details>
+            <p><strong>Valoración:</strong> ★★★★★</p>
+            <p>Precio: 3.999€</p>
+            <a href="../Pagos/pagoAppleMacBookProde16pulgadas.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!--Apple MacBook Air de 13 pulgadas-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouselmackbookair" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselmackbookair" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselmackbookair" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/AppleMacBook Air/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/AppleMacBook Air/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselmackbookair" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselmackbookair" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del producto-->
+          <div class="card-body">
+            <h5 class="card-title">Apple MacBook Air de 13 pulgadas<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">El MacBook Pro de 14,2 pulgadas tiene pantalla Liquid Retina XDR con resolución de 3024x1964, brillo de hasta 1600 nits y True Tone. Incorpora el chip Apple M3 Pro con CPU de 12 núcleos, GPU de 18 núcleos, 18 GB de memoria unificada y 1 TB de almacenamiento SSD.</p>
+            <details>
+              <summary>Ver características</summary>
+              <ul>
+                <li><strong>Marca:</strong>Apple</li>
+                <li><strong>Sistema operativo:</strong>macOS Sonoma</li>
+                <li><strong>Memoria RAM instalada:</strong>8 GB unificada</li>
+                <li><strong>Capacidad de almacenamiento:</strong>256 GB SSD</li>
+                <li><strong>Tamaño de pantalla:</strong>13,6 pulgadas</li>
+                <li><strong>Nombre del modelo:</strong>MacBook Air 13" M2</li>
+                <li><strong>Procesador:</strong>Apple M2 (CPU de 8 núcleos, GPU de 8 núcleos)</li>
+                <li><strong>Conectividad:</strong>Wi-Fi 6, Bluetooth 5.3</li>
+                <li><strong>Puertos:</strong>2 x Thunderbolt/USB 4, MagSafe 3, conector de auriculares de 3,5 mm</li>
+                <li><strong>Peso:</strong>1,24 kg</li>
+                <li><strong>Color:</strong>Gris espacial</li>
+              </ul>
+            </details>
+            <p><strong>Valoración:</strong> ★★★★☆</p>
+            <p>Precio: 1.199€</p>
+            <a href="../Pagos/pagoAppleMacBookAirde13pulgadas.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!--Apple MacBook Pro de 14 pulgadas-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouselapplepro" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselapplepro" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselapplepro" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/Apple MacBook Pro de 14 pulgadas/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/Apple MacBook Pro de 14 pulgadas/imagen2.avif" class="d-block w-100" alt="Imagen 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselapplepro" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselapplepro" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del Producto-->
+          <div class="card-body">
+            <h5 class="card-title">Apple MacBook Pro de 14 pulgadas<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla Liquid Retina XDR de 14,2 pulgadas con resolución de 3024 x 1964 píxeles, brillo máximo de 1600 nits y tecnología True Tone. Equipado con el chip Apple M3 Pro, que incluye una CPU de 12 núcleos y una GPU de 18 núcleos, junto con 18 GB de memoria unificada y 1 TB de almacenamiento SSD.</p>
+            <details>
+              <summary>Ver características</summary>
+              <ul>
+                <li><strong>Marca:</strong>Apple</li>
+                <li><strong>Sistema operativo:</strong>macOS Sonoma</li>
+                <li><strong>Memoria RAM instalada:</strong>18 GB unificada</li>
+                <li><strong>Capacidad de almacenamiento:</strong>1 TB SSD</li>
+                <li><strong>Tamaño de pantalla:</strong>14,2 pulgadas</li>
+                <li><strong>Nombre del modelo:</strong>MacBook Pro 14" M3 Pro</li>
+                <li><strong>Procesador:</strong>Apple M3 Pro (CPU de 12 núcleos, GPU de 18 núcleos)</li>
+                <li><strong>Conectividad:</strong>Wi-Fi 6E, Bluetooth 5.3</li>
+                <li><strong>Puertos:</strong>3 x Thunderbolt 4 (USB-C), 1 x HDMI, lector de tarjetas SDXC, MagSafe 3, conector de auriculares de 3,5 mm</li>
+                <li><strong>Peso:</strong>1,61 kg</li>
+                <li><strong>Color:</strong>Plata</li>
+              </ul>
+            </details>
+            <p><strong>Valoración:</strong> ★★★★★</p>
+            <p>Precio: 2.959€</p>
+            <a href="../Pagos/pagoAppleMacBookProde14pulgadas.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Apple MacBook Pro de 14 pulgadas con chip M4 Max-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouselapplepro14" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselapplepro14" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselapplepro14" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/Apple MacBook Pro de 14 pulgadas Max/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/Apple MacBook Pro de 14 pulgadas Max/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselapplepro14" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselapplepro14" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del Producto-->
+          <div class="card-body">
+            <h5 class="card-title"> Apple MacBook Pro de 14 pulgadas con chip M4 Max<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla Liquid Retina XDR de 14,2 pulgadas con resolución de 3024 x 1964 píxeles, brillo máximo de 1600 nits y tecnología True Tone. Equipado con el chip Apple M4 Max, que incluye una CPU de 16 núcleos y una GPU de 40 núcleos, junto con 48 GB de memoria unificada y 2 TB de almacenamiento SSD.</p>
+            <details>
+              <summary>Ver características</summary>
+              <ul>
+                <li><strong>Marca:</strong>Apple</li>
+                <li><strong>Sistema operativo:</strong>macOS Sonoma</li>
+                <li><strong>Memoria RAM instalada:</strong>48 GB unificada</li>
+                <li><strong>Capacidad de almacenamiento:</strong>2 TB SSD</li>
+                <li><strong>Tamaño de pantalla:</strong>14,2 pulgadas</li>
+                <li><strong>Nombre del modelo:</strong>MacBook Pro 14" M4 Max</li>
+                <li><strong>Procesador:</strong>Apple M4 Max (CPU de 16 núcleos, GPU de 40 núcleos)</li>
+                <li><strong>Conectividad:</strong>Wi-Fi 6E, Bluetooth 5.3</li>
+                <li><strong>Puertos:</strong>3 x Thunderbolt 5 (USB-C), 1 x HDMI, lector de tarjetas SDXC, MagSafe 3, conector de auriculares de 3,5 mm</li>
+                <li><strong>Peso:</strong>1,61 kg</li>
+                <li><strong>Color:</strong>Plata</li>
+              </ul>
+            </details>
+            <p><strong>Valoración:</strong> ★★★★★</p>
+            <p>Precio: 3.999€</p>
+            <a href="../Pagos/pagoAppleMacBookProde14pulgadasconchipM4Max.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+<!--Venta Window-->
+<div id="ventaapple">
+  <section class="py-3 bg-light">
+    <h2 id="titulo2" class="text-center mb-5"><i class="bi bi-windows"></i>  VENTA DE PORTÁTILES WINDOW</h2>
+    <div class="row justify-content-center px-4 px-md-5">
+
+      <!--Lenovo ThinkPad P1 Gen 6-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carousellenovothinkad" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carousellenovothinkad" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carousellenovothinkad" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/Lenovo ThinkPad P1 Gen 6/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/Lenovo ThinkPad P1 Gen 6/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousellenovothinkad" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousellenovothinkad" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del producto-->
+          <div class="card-body">
+            <h5 class="card-title">Lenovo ThinkPad P1 Gen 6<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Portátil profesional con pantalla OLED WQUXGA de 16" (3840 x 2400 píxeles), procesador Intel Core i9-13900H, 32 GB de RAM DDR5, almacenamiento SSD de 2 TB y tarjeta gráfica NVIDIA GeForce RTX 4090.</p>
+            <details> 
+              <summary>Ver características</summary> 
+              <ul> 
+                <li><strong>Marca:</strong>Lenovo</li> 
+                <li><strong>Sistema operativo:</strong>Windows 11 Pro</li> 
+                <li><strong>Memoria RAM instalada:</strong>32 GB DDR5</li> 
+                <li><strong>Capacidad de almacenamiento:</strong>2 TB SSD</li> 
+                <li><strong>Tamaño de pantalla:</strong>16 pulgadas OLED WQUXGA</li> 
+                <li><strong>Nombre del modelo:</strong>ThinkPad P1 Gen 6</li> 
+                <li><strong>Procesador:</strong>Intel Core i9-13900H</li> 
+                <li><strong>Tarjeta gráfica:</strong>NVIDIA GeForce RTX 4090</li> 
+                <li><strong>Conectividad:</strong>Wi-Fi 6E, Bluetooth 5.2</li> 
+                <li><strong>Puertos:</strong>2 x Thunderbolt 4, 2 x USB-A 3.2, HDMI 2.1, lector de tarjetas SD, conector de auriculares de 3,5 mm</li> 
+                <li><strong>Peso:</strong>1,81 kg</li> 
+                <li><strong>Color:</strong>Negro</li> 
+              </ul> 
+            </details>
+            <p><strong>Valoración:</strong> ★★★★★</p>
+            <p>Precio: 3.500€</p>
+            <a href="../Pagos/pagoLenovoThinkPadP1Gen6.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!--Dell XPS 17 9730-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouseldell" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouseldell" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouseldell" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/Dell XPS 17 9730/imagen1.avif" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/Dell XPS 17 9730/imagen2.avif" class="d-block w-100" alt="Imagen 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouseldell" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouseldell" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del producto-->
+          <div class="card-body">
+            <h5 class="card-title">Dell XPS 17 9730<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Portátil de alto rendimiento con pantalla de 17 pulgadas 4K UHD+ (3840 x 2400 píxeles), procesador Intel Core i7-13700H, 32 GB de RAM DDR5, almacenamiento SSD de 1 TB y tarjeta gráfica NVIDIA GeForce RTX 4050.</p>
+            <details> 
+              <summary>Ver características</summary> 
+              <ul> 
+                <li><strong>Marca:</strong>Dell</li> 
+                <li><strong>Sistema operativo:</strong>Windows 11 Home</li> 
+                <li><strong>Memoria RAM instalada:</strong>32 GB DDR5</li> 
+                <li><strong>Capacidad de almacenamiento:</strong>1 TB SSD</li> 
+                <li><strong>Tamaño de pantalla:</strong>17 pulgadas 4K UHD+</li> 
+                <li><strong>Nombre del modelo:</strong>XPS 17 9730</li> 
+                <li><strong>Procesador:</strong>Intel Core i7-13700H</li> 
+                <li><strong>Tarjeta gráfica:</strong>NVIDIA GeForce RTX 4050</li> 
+                <li><strong>Conectividad:</strong>Wi-Fi 6E, Bluetooth 5.3</li> 
+                <li><strong>Puertos:</strong>4 x Thunderbolt 4 (USB-C), lector de tarjetas SD, conector de auriculares de 3,5 mm</li> 
+                <li><strong>Peso:</strong>2,21 kg</li> 
+                <li><strong>Color:</strong>Plata</li> 
+              </ul> 
+            </details>
+            <p><strong>Valoración:</strong> ★★★★☆</p>
+            <p>Precio: 2.878€</p>
+            <a href="../Pagos/pagoDellXPS179730.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!--Asus ROG Strix G16 G614JI-N3163-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouselasus" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselasus" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselasus" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/Asus ROG Strix G16/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/Asus ROG Strix G16/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselasus" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselasus" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del Producto-->
+          <div class="card-body">
+            <h5 class="card-title">Asus ROG Strix G16<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Portátil orientado al gaming y tareas profesionales exigentes, con pantalla de 16 pulgadas FHD+ (1920 x 1200 píxeles) a 165Hz, procesador Intel Core i7-13650HX, 32 GB de RAM DDR5, almacenamiento SSD de 1 TB y tarjeta gráfica NVIDIA GeForce RTX 4070.</p>
+            <details> 
+              <summary>Ver características</summary> 
+              <ul> 
+                <li><strong>Marca:</strong>Asus</li> 
+                <li><strong>Sistema operativo:</strong>Windows 11 Home</li> 
+                <li><strong>Memoria RAM instalada:</strong>32 GB DDR5</li> 
+                <li><strong>Capacidad de almacenamiento:</strong>1 TB SSD</li> 
+                <li><strong>Tamaño de pantalla:</strong>16 pulgadas FHD+ 165Hz</li> 
+                <li><strong>Nombre del modelo:</strong>ROG Strix G16 G614JI-N3163</li> 
+                <li><strong>Procesador:</strong>Intel Core i7-13650HX</li> 
+                <li><strong>Tarjeta gráfica:</strong>NVIDIA GeForce RTX 4070</li> 
+                <li><strong>Conectividad:</strong>Wi-Fi 6E, Bluetooth 5.2</li> 
+                <li><strong>Puertos:</strong>2 x USB-C, 2 x USB-A, HDMI 2.1, Ethernet, conector de auriculares de 3,5 mm</li> 
+                <li><strong>Peso:</strong>2,5 kg</li> 
+                <li><strong>Color:</strong>Negro</li> 
+              </ul> 
+            </details>
+            <p><strong>Valoración:</strong> ★★★★★</p>
+            <p>Precio: 1.472€</p>
+            <a href="../Pagos/pagoasusROGStrixG16G614JI-N3163.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MSI Creator Z16-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouselmsi" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselmsi" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselmsi" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/MSI Creator Z16/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/MSI Creator Z16/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselmsi" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselmsi" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <br><br>
+          <!--Información del Producto-->
+          <div class="card-body">
+            <h5 class="card-title"> MSI Creator Z16<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Portátil diseñado para creadores de contenido, con pantalla táctil QHD+ de 16 pulgadas (2560 x 1600 píxeles), procesador Intel Core i9, 32 GB de RAM DDR5, almacenamiento SSD de 1 TB y tarjeta gráfica NVIDIA GeForce RTX 3060.</p>
+            <details> 
+              <summary>Ver características</summary> 
+              <ul> 
+                <li><strong>Marca:</strong>MSI</li> 
+                <li><strong>Sistema operativo:</strong>Windows 11 Pro</li> 
+                <li><strong>Memoria RAM instalada:</strong>32 GB DDR5</li> 
+                <li><strong>Capacidad de almacenamiento:</strong>1 TB SSD</li> 
+                <li><strong>Tamaño de pantalla:</strong>16 pulgadas QHD+ táctil</li> 
+                <li><strong>Nombre del modelo:</strong>Creator Z16</li> 
+                <li><strong>Procesador:</strong>Intel Core i9</li> 
+                <li><strong>Tarjeta gráfica:</strong>NVIDIA GeForce RTX 3060</li> 
+                <li><strong>Conectividad:</strong>Wi-Fi 6E, Bluetooth 5.2</li> 
+                <li><strong>Puertos:</strong>2 x Thunderbolt 4, 2 x USB-A, lector de tarjetas SD, conector de auriculares de 3,5 mm</li> 
+                <li><strong>Peso:</strong>2,39 kg</li> 
+                <li><strong>Color:</strong>Plata</li> 
+              </ul> 
+            </details>
+            <p><strong>Valoración:</strong> ★★★★★</p>
+            <p>Precio: 1.300€</p>
+            <a href="../Pagos/pagoMSICreatorZ16.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+  <section class="py-3 bg-light">
+    <footer><br>
+      <p><i class="bi bi-c-circle"></i>  2025 ShopiMundo. Todos los derechos reservados.<br>
+      <i class="bi bi-telephone"></i>  924 48 68 59 <br>
+      <i class="bi bi-envelope-at"></i>  shopimundo12@gmail.com<br>
+      <i class="bi bi-instagram"></i>  @shopimundo_</p>
+    </footer>
+    </section>
+</body>
+</html>

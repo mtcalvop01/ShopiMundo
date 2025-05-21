@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venta de móviles</title>
+  <meta name="description" content="Descripción breve de la página">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<style>
+    .navbar{
+    position: fixed;
+    background-color: #5fa8d3;
+    top:0;
+    width:100%;
+    /*Asegura que la barra se muestre por encima de otros elementos*/
+    z-index: 1000;
+  }
+
+  .nav-item{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-decoration: underline;
+  }
+
+  footer {
+    /*Alinea el texto horizontalmente dentro del elemento*/
+    text-align: center;
+    /*Define el espacio interno entre el contenido del elemento y sus bordes*/
+    padding: 10px 0;
+    /*Define el tamaño de la fuente del texto*/
+    font-size: 0.9em;
+    /*Establece el color del texto*/
+    color: black;
+    background-color: white;
+}
+
+#compra,
+#pago {
+    /*Establece el color del fondo*/
+    background-color: #abd0e6;
+    /*Define el espacio interno entre el contenido del elemento y sus bordes*/
+    padding: 20px;
+    /*Define el espacio externo en la parte inferior del elemento*/
+    margin-bottom: 20px;
+    /*Redondea las esquinas de un elemento*/
+    border-radius: 5px;
+    /*Agrega una sombra alrededor de un elemento*/
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/*Aplica los estilos a los títulos en h2 a la clase compra*/
+#compra h2 {
+    /*Alinea el texto horizontalmente dentro del elemento*/
+    text-align: center;
+    /*Define el espacio externo en la parte inferior del elemento*/
+    margin-bottom: 20px;
+}
+
+/*Aplica los estilos a los párrafos que están en la clase resumen-compra*/
+.resumen-compra p {
+    /*Define el tamaño de la fuente del texto*/
+    font-size: 1.2em;
+    /*Define el espacio externo en la parte inferior del elemento*/
+    margin-bottom: 10px;
+}
+
+/*Aplica los estilos a los títulos h2 en la clase pago*/
+#pago h2 {
+    /*Alinea el texto horizontalmente dentro del elemento*/
+    text-align: center;
+}
+
+/*Aplica al formulario los estilos asignados*/
+form {
+    /*Define el espacio interno entre el contenido del elemento y sus bordes*/
+    padding: 20px;
+    /*Define el espacio en la parte superior de un elemento*/
+    margin-top: 20px;
+    /*Redondea las esquinas de un elemento*/
+    border-radius: 5px;
+}
+
+/*Aplica los estilos al label de contactos*/
+#contacto,
+label {
+    /*Controla como se presenta un elemento en el flujo del documento*/
+    display: block;
+    /*Define el espacio en la parte superior de un elemento*/
+    margin-top: 10px;
+    /*Establece el color del fondo*/
+    background-color: #abd0e6;
+}
+
+.cuadrado input,
+.cuadrado label {
+    /*Controla como se presenta un elemento en el flujo del documento*/
+    display: inline;
+    /*Define el ancho de un elemento*/
+    width: auto;
+}
+
+button {
+    /*Establece el color del fondo*/
+    background-color:#5fa8d3 ;
+    /*Establece el color del texto*/
+    color: white;
+    /*Define el espacio interno entre el contenido del elemento y sus bordes*/
+    padding: 10px 20px;
+    /*Define el espacio en la parte superior de un elemento*/
+    margin-top: 20px;
+    /*Controla el borde de un elemento*/
+    border: none;
+    /*Redondea las esquinas de un elemento*/
+    border-radius: 5px;
+    /*Controla como se ve el puntero del ratón*/
+    cursor: pointer;
+}
+
+/*Aplica el color del fondo al botón*/
+button:hover {
+    /*Establece el color del fondo*/
+    background-color: #5fa8d3;
+}
+
+#pago h2 {
+    /*Alinea el texto horizontalmente dentro del elemento*/
+    text-align: center;
+}
+
+/*Aplica al formulario los estilos asignados*/
+form {
+    /*Define el espacio interno entre el contenido del elemento y sus bordes*/
+    padding: 20px;
+    /*Define el espacio en la parte superior de un elemento*/
+    margin-top: 20px;
+    /*Redondea las esquinas de un elemento*/
+    border-radius: 5px;
+}
+</style>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand"><h3>ShopiMundo</h3></a>
+      <!--Botón Lateral-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!--Contenido de la barra-->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="../Boostrap.html">Página Principal</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br><br><br>
+  <div id="compra">
+    <h2><i class="bi bi-bag-plus"></i>  Detalles de la Compra</h2>
+    <div class="resumen-compra">
+        <p><strong>Producto:</strong> iPhone 15</p>
+        <p><strong>Precio:</strong> 809€</p>
+        <p><strong>Cantidad:</strong> 1</p>
+        <p><strong>Total:</strong> 809€</p>
+    </div>
+</div>
+<div id="pago">
+    <h2><i class="bi bi-box-seam"></i>  Detalles de Pago</h2>
+    <form action="https://jkorpela.fi/cgi-bin/echo.cgi " method="post" target="_blank">
+        <div class="campo">
+            <label for="nombre"><i class="bi bi-people"></i>  Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+        </div>
+        <div class="campo">
+            <label for="direccion"><i class="bi bi-geo-alt"></i>  Dirección de Envío:</label>
+            <input type="text" id="direccion" name="direccion" placeholder="Dirección de envío" required>
+        </div>
+        <div class="campo">
+            <label for="tarjeta"><i class="bi bi-credit-card"></i>  Número de Tarjeta:</label>
+            <input type="text" id="tarjeta" name="tarjeta" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19"
+                required>
+        </div>
+        <div class="campo">
+            <label for="fecha-expiracion"><i class="bi bi-calendar-date"></i>  Fecha de Expiración:</label>
+            <input type="month" id="fecha-expiracion" name="fecha-expiracion" required>
+        </div>
+        <div class="campo">
+            <label for="cvv"><i class="bi bi-lock"></i>  CVV (Código de Seguridad):</label>
+            <input type="text" id="cvv" name="cvv" placeholder="XXX" maxlength="3" required>
+        </div>
+        <br>
+        <div class="cuadrado">
+            <input type="checkbox" id="condicion" name="condicion" value="condicion" required>
+            <label for="condicion">He leído y acepto el aviso legal y la política de privacidad.</label>
+        </div>
+        <div class="campo">
+            <button type="submit">Confirmar Pago</button>
+        </div>
+    </form>
+</div>
+<section class="py-3 bg-light">
+    <footer><br>
+      <p><i class="bi bi-c-circle"></i>  2025 ShopiMundo. Todos los derechos reservados.<br>
+      <i class="bi bi-telephone"></i>  924 48 68 59 <br>
+      <i class="bi bi-envelope-at"></i>  shopimundo12@gmail.com<br>
+      <i class="bi bi-instagram"></i>  @shopimundo_</p>
+    </footer>
+    </section>
+</body>

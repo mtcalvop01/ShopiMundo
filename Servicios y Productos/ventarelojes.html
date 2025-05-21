@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venta de Relojes</title>
+  <meta name="description" content="Descripción breve de la página">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<style>
+/* Ajusta el tamaño del carrusel y las imágenes */
+.carousel {
+    max-height: 265px;  /* Más pequeño que antes (antes era 250px-300px) */
+    overflow: hidden;
+    background: #f8f9fa; /* Fondo por si la imagen no cubre todo */
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Sin recorte (usa 'cover' si prefieres que llene el espacio) */
+    max-height: 265px;   /* Altura máxima reducida */
+    padding: 10px;       /* Espacio interno para que no toquen los bordes */
+  }
+  
+  /* Opcional: Ajusta el margen entre tarjetas */
+  .card {
+    margin-bottom: 15px;
+    transition: transform 0.3s; /* Efecto hover opcional */
+  }
+  
+  .card:hover {
+    transform: scale(1.02); /* Pequeño zoom al pasar el mouse */
+  }
+
+  .navbar{
+    position: fixed;
+    background-color: #5fa8d3;
+    top:0;
+    width:100%;
+    /*Asegura que la barra se muestre por encima de otros elementos*/
+    z-index: 1000;
+  }
+
+  .nav-item{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-decoration: underline;
+  }
+
+  footer {
+    /*Alinea el texto horizontalmente dentro del elemento*/
+    text-align: center;
+    /*Define el espacio interno entre el contenido del elemento y sus bordes*/
+    padding: 10px 0;
+    /*Define el tamaño de la fuente del texto*/
+    font-size: 0.9em;
+    /*Establece el color del texto*/
+    color: black;
+    background-color: #5fa8d3;
+}
+
+ul li {
+    /*Define el margen que está alrededor del elemento*/
+    margin: 5px 0;
+    text-align: left;
+}
+
+button {
+    /*Establece el color del fondo*/
+    background-color:#5fa8d3 ;
+    /*Establece el color del texto*/
+    color: white;
+    /*Define el espacio interno entre el contenido del elemento y sus bordes*/
+    padding: 10px 20px;
+    /*Define el espacio en la parte superior de un elemento*/
+    margin-top: 20px;
+    /*Controla el borde de un elemento*/
+    border: none;
+    /*Redondea las esquinas de un elemento*/
+    border-radius: 5px;
+    /*Controla como se ve el puntero del ratón*/
+    cursor: pointer;
+}
+
+/*Aplica el color del fondo al botón*/
+button:hover {
+    /*Establece el color del fondo*/
+    background-color: #5fa8d3;
+}
+
+</style>
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand"><h3>ShopiMundo</h3></a>
+    <!--Botón Lateral-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--Contenido de la barra-->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="../Boostrap.html">Página Principal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#titulo1">Venta Apple</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#titulo2">Venta Android</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br><br><br>
+
+<!--Venta Apple-->
+<div id="ventaapple">
+  <section class="py-3 bg-light">
+    <h2 id="titulo1" class="text-center mb-5"><i class="bi bi-apple"></i>  VENTA DE RELOJES APPLE</h2>
+    <div class="row justify-content-center px-4 px-md-5">
+
+      <!--Apple Watch Series 10 (42 mm)-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouselserie10" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselserie10" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselserie10" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/Apple Watch Series 10 (42 mm)/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/Apple Watch Series 10 (42 mm)/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselserie10" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselserie10" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del producto-->
+          <div class="card-body">
+            <h5 class="card-title">Apple Watch Series 10 (42 mm)<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla Retina LTPO OLED siempre activa de 42 mm con resolución de 374 x 446 píxeles y brillo máximo de 2.000 nits. Equipado con el chip S10 SiP, 64 GB de almacenamiento y funciones avanzadas de salud y fitness.</p>
+            <details> 
+              <summary>Ver características</summary> 
+              <ul> 
+                <li><strong>Marca:</strong> Apple</li> 
+                <li><strong>Sistema operativo:</strong> watchOS 11</li> 
+                <li><strong>Memoria RAM instalada:</strong> No especificada</li> 
+                <li><strong>Capacidad de almacenamiento:</strong> 64 GB</li> 
+                <li><strong>Tamaño de pantalla:</strong> 42 mm</li> 
+                <li><strong>Nombre del modelo:</strong> Apple Watch Series 10</li> 
+                <li><strong>Procesador:</strong> Apple S10 SiP</li>
+                <li><strong>Conectividad:</strong> Wi-Fi, Bluetooth 5.3, GPS, LTE (opcional)</li> 
+                <li><strong>Puertos:</strong> No aplica</li> 
+                <li><strong>Peso:</strong> 30 g (aluminio, GPS + Cellular)</li> 
+                <li><strong>Color:</strong> Negro azabache, oro rosa, plata</li> 
+              </ul> 
+            </details>
+            <p><strong>Valoración:</strong> ★★★★★</p>
+            <p>Precio: 449€</p>
+            <a href="../Pagos/pagoAppleWatchSeries10(42 mm).html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!--Apple Watch Ultra 2-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouselultra2" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselultra2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselultra2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/Apple Watch Ultra 2/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/Apple Watch Ultra 2/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselultra2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselultra2" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del producto-->
+          <div class="card-body">
+            <h5 class="card-title">Apple Watch Ultra 2<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla Retina LTPO OLED siempre activa de 49 mm con resolución de 410 x 502 píxeles y brillo máximo de 3.000 nits. Equipado con el chip S9 SiP, 64 GB de almacenamiento y diseñado para deportes extremos.</p>
+            <details> 
+              <summary>Ver características</summary> 
+              <ul> 
+                <li><strong>Marca:</strong> Apple</li> 
+                <li><strong>Sistema operativo:</strong> watchOS 11</li> 
+                <li><strong>Memoria RAM instalada:</strong> No especificada</li> 
+                <li><strong>Capacidad de almacenamiento:</strong> 64 GB</li> 
+                <li><strong>Tamaño de pantalla:</strong> 49 mm</li> 
+                <li><strong>Nombre del modelo:</strong> Apple Watch Ultra 2</li> 
+                <li><strong>Procesador:</strong> Apple S9 SiP</li> 
+                <li><strong>Conectividad:</strong> Wi-Fi, Bluetooth 5.3, GPS, LTE</li> 
+                <li><strong>Puertos:</strong> No aplica</li> 
+                <li><strong>Peso:</strong> 61,4 g</li> 
+                <li><strong>Color:</strong> Titanio natural, negro</li> 
+              </ul> 
+            </details>
+            <p><strong>Valoración:</strong> ★★★★☆</p>
+            <p>Precio: 899€</p>
+            <a href="../Pagos/pagoAppleWatchUltra2.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!--Apple Watch Series 9 (41 mm)-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouselserie9" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselserie9" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselserie9" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/Apple Watch Series 9 (41 mm)/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/Apple Watch Series 9 (41 mm)/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselserie9" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselserie9" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del Producto-->
+          <div class="card-body">
+            <h5 class="card-title">Apple Watch Series 9 (41 mm)<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla Retina LTPO OLED siempre activa de 41 mm con resolución de 352 x 430 píxeles y brillo máximo de 2.000 nits. Equipado con el chip S9 SiP, 64 GB de almacenamiento y funciones avanzadas de salud y bienestar.</p>
+            <details>
+              <summary>Ver características</summary>
+              <ul>
+                <li><strong>Marca:</strong> Apple</li> 
+                <li><strong>Sistema operativo:</strong> watchOS 10</li> 
+                <li><strong>Memoria RAM instalada:</strong> No especificada</li> 
+                <li><strong>Capacidad de almacenamiento:</strong> 64 GB</li> 
+                <li><strong>Tamaño de pantalla:</strong> 41 mm</li> 
+                <li><strong>Nombre del modelo:</strong> Apple Watch Series 9</li> 
+                <li><strong>Procesador:</strong> Apple S9 SiP</li> 
+                <li><strong>Conectividad:</strong> Wi-Fi, Bluetooth 5.3, GPS, LTE (opcional)</li> 
+                <li><strong>Puertos:</strong> No aplica</li> 
+                <li><strong>Peso:</strong> 31,9 g (aluminio, GPS)</li> 
+                <li><strong>Color:</strong> Medianoche, plata, rojo, oro rosa</li> 
+              </ul> 
+            </details>
+            <p><strong>Valoración:</strong> ★★★★★</p>
+            <p>Precio: 449€</p>
+            <a href="../Pagos/pagoAppleWatchSeries9(41 mm).html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!--Apple Watch SE (2.ª generación, 40 mm)-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouselapplepro14" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselapplepro14" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselapplepro14" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/Apple Watch SE (2.ª generación, 40 mm)/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/Apple Watch SE (2.ª generación, 40 mm)/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselapplepro14" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselapplepro14" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del Producto-->
+          <div class="card-body">
+            <h5 class="card-title">Apple Watch SE (40 mm)<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla Retina OLED de 40 mm con resolución de 324 x 394 píxeles. Equipado con el chip S8 SiP, 32 GB de almacenamiento y funciones esenciales de salud y seguridad.</p>
+            <details> 
+              <summary>Ver características</summary> 
+              <ul> 
+                <li><strong>Marca:</strong> Apple</li> 
+                <li><strong>Sistema operativo:</strong> watchOS 10</li> 
+                <li><strong>Memoria RAM instalada:</strong> No especificada</li> 
+                <li><strong>Capacidad de almacenamiento:</strong> 32 GB</li> 
+                <li><strong>Tamaño de pantalla:</strong> 40 mm</li> 
+                <li><strong>Nombre del modelo:</strong> Apple Watch SE (2.ª generación)</li> 
+                <li><strong>Procesador:</strong> Apple S8 SiP</li> 
+                <li><strong>Conectividad:</strong> Wi-Fi, Bluetooth 5.0, GPS, LTE (opcional)</li> 
+                <li><strong>Puertos:</strong> No aplica</li> 
+                <li><strong>Peso:</strong> 26,4 g (aluminio, GPS)</li> 
+                <li><strong>Color:</strong> Plata, medianoche, oro</li> 
+              </ul> 
+            </details>
+            <p><strong>Valoración:</strong> ★★★★★</p>
+            <p>Precio: 279€</p>
+            <a href="../Pagos/pagoAppleiPadProde13pulgadas(2024).html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+<!--Venta Window-->
+<div id="ventaapple">
+  <section class="py-3 bg-light">
+    <h2 id="titulo2" class="text-center mb-5"><i class="bi bi-smartwatch"></i>  VENTA DE RELOJES SMARTWATCH</h2>
+    <div class="row justify-content-center px-4 px-md-5">
+
+      <!--Samsung Galaxy Watch6 (44 mm)-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouselgalaxy" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselgalaxy" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselgalaxy" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/Samsung Galaxy Watch6 (44 mm)/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/Samsung Galaxy Watch6 (44 mm)/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselgalaxy" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselgalaxy" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del producto-->
+          <div class="card-body">
+            <h5 class="card-title">Samsung Galaxy Watch6<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla Super AMOLED de 1,5 pulgadas con resolución de 480 x 480 píxeles y cristal de zafiro. Equipado con el procesador Exynos W930, 2 GB de RAM y 16 GB de almacenamiento interno.</p>
+            <details> 
+              <summary>Ver características</summary> 
+              <ul> 
+                <li><strong>Marca:</strong> Samsung</li> 
+                <li><strong>Sistema operativo:</strong> Wear OS 4 con One UI 5 Watch</li> 
+                <li><strong>Memoria RAM instalada:</strong> 2 GB</li> 
+                <li><strong>Capacidad de almacenamiento:</strong> 16 GB</li> 
+                <li><strong>Tamaño de pantalla:</strong> 1,5 pulgadas</li> 
+                <li><strong>Nombre del modelo:</strong> Galaxy Watch6</li> 
+                <li><strong>Procesador:</strong> Exynos W930 Dual-Core @ 1,4 GHz</li> 
+                <li><strong>Conectividad:</strong> Bluetooth 5.3, Wi-Fi 5, NFC, LTE (opcional)</li> 
+                <li><strong>Puertos:</strong> No aplica</li> 
+                <li><strong>Peso:</strong> 33,5 g</li> 
+                <li><strong>Color:</strong> Grafito, Dorado</li> 
+              </ul> 
+            </details>
+            <p><strong>Valoración:</strong> ★★★★★</p>
+            <p>Precio: 319€</p>
+            <a href="../Pagos/pagoSamsungGalaxyWatch6(44 mm).html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+<br>
+      <!--Garmin Venu 3S-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouselgarmin" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselgarmin" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselgarmin" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/Garmin Venu 3S/imagen1.webp" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/Garmin Venu 3S/imagen2.avif" class="d-block w-100" alt="Imagen 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselgarmin" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselgarmin" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del producto-->
+          <div class="card-body">
+            <h5 class="card-title">Garmin Venu 3S<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla AMOLED de 1,2 pulgadas protegida con cristal Corning Gorilla Glass 3. Brinda hasta 10 días de autonomía y funciones avanzadas para el monitoreo de salud, actividad física y bienestar general.</p>
+            <details> 
+              <summary>Ver características</summary> 
+              <ul> 
+                <li><strong>Marca:</strong> Garmin</li> 
+                <li><strong>Sistema operativo:</strong> Propietario de Garmin</li> 
+                <li><strong>Memoria RAM instalada:</strong> No especificada</li> 
+                <li><strong>Capacidad de almacenamiento:</strong> 8 GB</li> 
+                <li><strong>Tamaño de pantalla:</strong> 1,2 pulgadas</li> 
+                <li><strong>Nombre del modelo:</strong> Venu 3S</li> 
+                <li><strong>Procesador:</strong> No especificado</li> 
+                <li><strong>Conectividad:</strong> Bluetooth, Wi-Fi, ANT+</li> 
+                <li><strong>Puertos:</strong> No aplica</li> 
+                <li><strong>Peso:</strong> 40 g</li> 
+                <li><strong>Color:</strong> Varios colores disponibles</li> 
+              </ul> 
+            </details>
+            <p><strong>Valoración:</strong> ★★★★☆</p>
+            <p>Precio: 450€</p>
+            <a href="../Pagos/pagoGarminVenu3S.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!--Huawei Watch GT 4 (46 mm)-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouselhuawei" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselhuawei" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselhuawei" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/Huawei Watch GT 4 (46 mm)/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/Huawei Watch GT 4 (46 mm)/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselhuawei" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselhuawei" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del Producto-->
+          <div class="card-body">
+            <h5 class="card-title">Huawei Watch GT 4<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla AMOLED de 1,43 pulgadas con resolución de 466 x 466 píxeles. Proporciona hasta 14 días de autonomía e integra funciones avanzadas para el seguimiento de salud, estado físico.</p>
+            <details> 
+              <summary>Ver características</summary> 
+              <ul> 
+                <li><strong>Marca:</strong> Huawei</li> 
+                <li><strong>Sistema operativo:</strong> HarmonyOS</li> 
+                <li><strong>Memoria RAM instalada:</strong> No especificada</li> 
+                <li><strong>Capacidad de almacenamiento:</strong> No especificada</li> 
+                <li><strong>Tamaño de pantalla:</strong> 1,43 pulgadas</li> 
+                <li><strong>Nombre del modelo:</strong> Watch GT 4</li> 
+                <li><strong>Procesador:</strong> No especificado</li> 
+                <li><strong>Conectividad:</strong> Bluetooth 5.2, NFC</li> 
+                <li><strong>Puertos:</strong> No aplica</li> 
+                <li><strong>Peso:</strong> 48 g</li> 
+                <li><strong>Color:</strong> Negro, Plata, Verde</li> 
+              </ul> 
+            </details>
+            <p><strong>Valoración:</strong> ★★★★★</p>
+            <p>Precio: 249€</p>
+            <a href="../Pagos/pagoHuaweiWatchGT4(46 mm).html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+      <!--Samsung Galaxy Watch5 Pro-->
+      <div class="col-md-3 col-12 mb-4">
+        <div class="card h-100 text-center border-info-subtle border-2">
+          <!--Carrusel de Imágenes-->
+          <div id="carouselmsi" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselmsi" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselmsi" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../imagenes/Samsung Galaxy Watch5 Pro/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../imagenes/Samsung Galaxy Watch5 Pro/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselmsi" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselmsi" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--Información del Producto-->
+          <div class="card-body">
+            <h5 class="card-title">Samsung Galaxy Watch5 Pro<br><br><u>Descripción breve del producto:</u></h5>
+            <p class="card-text">Pantalla Super AMOLED de 1,4 pulgadas con resolución de 450 x 450 píxeles y cristal de zafiro. Incluye procesador Exynos W920, 1,5 GB de RAM, 16 GB internos y autonomía de hasta 80 horas.</p>
+            <details> 
+              <summary>Ver características</summary> 
+              <ul> 
+                <li><strong>Marca:</strong> Samsung</li> 
+                <li><strong>Sistema operativo:</strong> Wear OS 3.5 con One UI Watch 4.5</li> 
+                <li><strong>Memoria RAM instalada:</strong> 1,5 GB</li> 
+                <li><strong>Capacidad de almacenamiento:</strong> 16 GB</li> 
+                <li><strong>Tamaño de pantalla:</strong> 1,4 pulgadas</li> 
+                <li><strong>Nombre del modelo:</strong> Galaxy Watch5 Pro</li> 
+                <li><strong>Procesador:</strong> Exynos W920 (Dual-Core a 1,18 GHz)</li> 
+                <li><strong>Conectividad:</strong> Bluetooth 5.2, Wi-Fi 2.4/5 GHz, NFC, GPS (Glonass, Beidou, Galileo)</li> 
+                <li><strong>Puertos:</strong> No aplica</li> 
+                <li><strong>Peso:</strong> 46,5 g</li> 
+                <li><strong>Color:</strong> Negro, Gris Titanio</li> 
+              </ul> 
+            </details>
+            <p><strong>Valoración:</strong> ★★★★★</p>
+            <p>Precio: 275€</p>
+            <a href="../Pagos/pagoSamsungGalaxyWatch5Pro.html" target="blank"> <button>Comprar</button></a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+  <section class="py-3 bg-light">
+    <footer><br>
+      <p><i class="bi bi-c-circle"></i>  2025 ShopiMundo. Todos los derechos reservados.<br>
+      <i class="bi bi-telephone"></i>  924 48 68 59 <br>
+      <i class="bi bi-envelope-at"></i>  shopimundo12@gmail.com<br>
+      <i class="bi bi-instagram"></i>  @shopimundo_</p>
+    </footer>
+    </section>
+</body>
+</html>

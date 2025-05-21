@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reparación de Altavoces</title>
+  <meta name="description" content="Descripción breve de la página">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<style>
+  /* Ajusta el tamaño del carrusel y las imágenes */
+  .carousel {
+    max-height: 265px;  /* Más pequeño que antes (antes era 250px-300px) */
+    overflow: hidden;
+    background: #f8f9fa; /* Fondo por si la imagen no cubre todo */
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Sin recorte (usa 'cover' si prefieres que llene el espacio) */
+    max-height: 265px;   /* Altura máxima reducida */
+    padding: 10px;       /* Espacio interno para que no toquen los bordes */
+  }
+  
+  /* Opcional: Ajusta el margen entre tarjetas */
+  .card {
+    margin-bottom: 15px;
+    transition: transform 0.3s; /* Efecto hover opcional */
+  }
+  
+  .card:hover {
+    transform: scale(1.02); /* Pequeño zoom al pasar el mouse */
+  }
+
+  .navbar{
+    position: fixed;
+    background-color: #5fa8d3;
+    top:0;
+    width:100%;
+    /*Asegura que la barra se muestre por encima de otros elementos*/
+    z-index: 1000;
+  }
+
+  .nav-item{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-decoration: underline;
+  }
+
+  footer {
+    /*Alinea el texto horizontalmente dentro del elemento*/
+    text-align: center;
+    /*Define el espacio interno entre el contenido del elemento y sus bordes*/
+    padding: 10px 0;
+    /*Define el tamaño de la fuente del texto*/
+    font-size: 0.9em;
+    /*Establece el color del texto*/
+    color: black;
+    background-color: #5fa8d3;
+}
+
+ul li {
+    /*Define el margen que está alrededor del elemento*/
+    margin: 5px 0;
+    text-align: left;
+}
+
+.scrollable-menu {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+button {
+    /*Establece el color del fondo*/
+    background-color:#5fa8d3 ;
+    /*Establece el color del texto*/
+    color: white;
+    /*Define el espacio interno entre el contenido del elemento y sus bordes*/
+    padding: 10px 20px;
+    /*Define el espacio en la parte superior de un elemento*/
+    margin-top: 20px;
+    /*Controla el borde de un elemento*/
+    border: none;
+    /*Redondea las esquinas de un elemento*/
+    border-radius: 5px;
+    /*Controla como se ve el puntero del ratón*/
+    cursor: pointer;
+}
+
+/*Aplica el color del fondo al botón*/
+button:hover {
+    /*Establece el color del fondo*/
+    background-color: #5fa8d3;
+}
+
+</style>
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand"><h3>ShopiMundo</h3></a>
+    <!--Botón Lateral-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--Contenido de la barra-->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="../Boostrap.html">Página Principal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#titulo1">Cámaras de Móviles</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#titulo2">Cámaras de Tablets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#titulo3">Cámaras de Portátiles</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br><br><br>
+
+<!--Venta Cámaras-->
+<div id="ventaapple">
+  <section class="py-3 bg-light">
+    <h2 id="titulo1" class="text-center mb-5"><i class="bi bi-camera-fill"></i>  REPARACIÓN CÁMARAS DE MÓVILES</h2>
+    <div class="row justify-content-center px-4 px-md-5">
+
+<!-- Reparar Cámaras Móviles -->
+<div class="col-md-3 col-12 mb-4">
+  <div class="card h-100 text-center border-info-subtle border-2">
+
+    <!-- Carrusel de Imágenes -->
+    <div id="carouselcamaramoviles" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselcamaramoviles" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselcamaramoviles" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../imagenes/Reparacióncamarademóvil/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+        </div>
+        <div class="carousel-item">
+          <img src="../imagenes/Reparacióncamarademóvil/imagen2.webp" class="d-block w-100" alt="Imagen 2">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselcamaramoviles" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselcamaramoviles" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Información del producto -->
+    <div class="card-body">
+      <h5 class="card-title">Reparación de Cámaras<br><br><u>Descripción breve del producto:</u></h5>
+      <p class="card-text">Este servicio da un soporte de cambio de cámaras con total fiabilidad.</p>
+      <details>
+        <summary>Seleccionar Modelo</summary>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="boton1">
+            Selecciona tu dispositivo:
+          </button>
+          <ul class="dropdown-menu scrollable-menu">
+            <li><a class="dropdown-item" href="#">iPhone 16</a></li>
+            <li><a class="dropdown-item" href="#">iPhone 16 Plus</a></li>
+            <li><a class="dropdown-item" href="#">iPhone 16 Pro</a></li>
+            <li><a class="dropdown-item" href="#">iPhone 16 Pro Max</a></li>
+            <li><a class="dropdown-item" href="#">iPhone 15</a></li>
+            <li><a class="dropdown-item" href="#">iPhone 15 Plus</a></li>
+            <li><a class="dropdown-item" href="#">iPhone 15 Pro</a></li>
+            <li><a class="dropdown-item" href="#">iPhone 15 Pro Max</a></li>
+            <li><a class="dropdown-item" href="#">Xiaomi Mi 11</a></li>
+            <li><a class="dropdown-item" href="#">Xiaomi Mi 9T Pro</a></li>
+            <li><a class="dropdown-item" href="#">Xiaomi Poco X3 Pro</a></li>
+            <li><a class="dropdown-item" href="#">Xiaomi Mi 10</a></li>
+          </ul>
+        </div>
+      </details>
+      <br>
+      <p id="precio1"><strong>Precio:</strong></p>
+      <p><strong>Valoración:</strong> ★★★★★</p>
+      <a href="../Pagos/pagoRepararCámarasMóviles.html" target="blank"> <button>Comprar Servicio</button></a>
+    </div>
+  </div>
+</div>
+</section>
+</div>
+
+<!-- Script para selección de modelo y precio -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const modelItems = document.querySelectorAll('.dropdown-item');
+    const buttonText = document.getElementById('boton1');
+    const priceElement = document.getElementById('precio1');
+
+    const precios = {
+      'iPhone 16': '78€',
+      'iPhone 16 Plus': '73€',
+      'iPhone 16 Pro': '80€',
+      'iPhone 16 Pro Max': '79€',
+      'iPhone 15': '70€',
+      'iPhone 15 Plus': '68€',
+      'iPhone 15 Pro': '75€',
+      'iPhone 15 Pro Max': '77€',
+      'Xiaomi Mi 11': '65€',
+      'Xiaomi Mi 9T Pro': '60€',
+      'Xiaomi Poco X3 Pro': '55€',
+      'Xiaomi Mi 10': '68€'
+    };
+
+    modelItems.forEach(item => {
+      item.addEventListener('click', function (e) {
+        e.preventDefault();
+        const selectedModel = this.textContent;
+        buttonText.textContent = selectedModel;
+        priceElement.textContent = `Precio: ${precios[selectedModel] || 'N/D'}`;
+      });
+    });
+  });
+</script>
+
+
+<!--Venta Cámaras Tablets-->
+<div id="ventaapple">
+  <section class="py-3 bg-light">
+    <h2 id="titulo2" class="text-center mb-5"><i class="bi bi-camera-fill"></i>  REPARACIÓN CÁMARAS DE TABLETS</h2>
+    <div class="row justify-content-center px-4 px-md-5">
+
+      <!-- Reparar camaras tablets-->
+<div class="col-md-3 col-12 mb-4">
+  <div class="card h-100 text-center border-info-subtle border-2">
+
+    <!-- Carrusel de Imágenes -->
+    <div id="carouselcamaratablet" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselcamaratablet" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselcamaratablet" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselcamaratablet" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../imagenes/Reparacióncamaradetablets/imagen1.webp" class="d-block w-100" alt="Imagen 1">
+        </div>
+        <div class="carousel-item">
+          <img src="../imagenes/Reparacióncamaradetablets/imagen2.jpeg" class="d-block w-100" alt="Imagen 2">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselcamaratablet" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselcamaratablet" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Información del producto -->
+    <div class="card-body">
+      <h5 class="card-title">Reparación de Cámaras<br><br><u>Descripción breve del producto:</u></h5>
+      <p class="card-text">Este servicio da un soporte de cambio de cámara con total fiabilidad.</p>
+      <details>
+        <summary>Seleccionar Modelo</summary>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="boton2">
+            Selecciona tu dispositivo:
+          </button>
+          <ul class="dropdown-menu scrollable-menu">
+            <li><a class="dropdown-item" href="#">Apple iPad Pro de 13 pulgadas</a></li>
+            <li><a class="dropdown-item" href="#">Apple iPad Air de 11 pulgadas</a></li>
+            <li><a class="dropdown-item" href="#">Apple iPad de 10.9 pulgadas (10.ª generación)</a></li>
+            <li><a class="dropdown-item" href="#">Apple iPad Mini de 8.3 pulgadas (6.ª generación)</a></li>
+            <li><a class="dropdown-item" href="#">Samsung Galaxy Tab S9 Ultra'</a></li>
+            <li><a class="dropdown-item" href="#">Lenovo Tab P12 Pro</a></li>
+            <li><a class="dropdown-item" href="#">Xiaomi Pad 6S Pro 12.4</a></li>
+            <li><a class="dropdown-item" href="#">Huawei MatePad Pro 13.2</a></li>
+          </ul>
+        </div>
+      </details>
+      <br>
+      <p id="precio2"><strong>Precio:</strong></p>
+      <p><strong>Valoración:</strong> ★★★★★</p>
+      <a href="../Pagos/pagoRepararcamarastablets.html" target="blank"> <button>Comprar Servicio</button></a>
+    </div>
+  </div>
+</div>
+</section>
+</div>
+
+<!-- Script para selección de modelo y precio -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const modelItems = document.querySelectorAll('.dropdown-item');
+    const buttonText = document.getElementById('boton2');
+    const priceElement = document.getElementById('precio2');
+
+    const precios = {
+      'Apple iPad Pro de 13 pulgadas': '95€',
+      'Apple iPad Air de 11 pulgadas': '85€',
+      'Apple iPad de 10.9 pulgadas (10.ª generación)': '75€',
+      'Apple iPad Mini de 8.3 pulgadas (6.ª generación)': '90€',
+      'Samsung Galaxy Tab S9 Ultra': '100€',
+      'Lenovo Tab P12 Pro': '70€',
+      'Xiaomi Pad 6S Pro 12.4': '80€',
+      'Huawei MatePad Pro 13.2': '98€'
+    };
+
+    modelItems.forEach(item => {
+      item.addEventListener('click', function (e) {
+        e.preventDefault();
+        const selectedModel = this.textContent;
+        buttonText.textContent = selectedModel;
+        priceElement.textContent = `Precio: ${precios[selectedModel] || 'N/D'}`;
+      });
+    });
+  });
+</script>
+
+<!--Venta Cámara Portátiles-->
+<div id="ventaapple">
+  <section class="py-3 bg-light">
+    <h2 id="titulo3" class="text-center mb-5"><i class="bi bi-camera-fill"></i>  REPARACIÓN CÁMARAS DE PORTÁTILES</h2>
+    <div class="row justify-content-center px-4 px-md-5">
+
+      <!-- Reparar cámara portátil-->
+<div class="col-md-3 col-12 mb-4">
+  <div class="card h-100 text-center border-info-subtle border-2">
+
+    <!-- Carrusel de Imágenes -->
+    <div id="carouselcamaraportatil" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselcamaraportatil" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselcamaraportatil" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../imagenes/Reparacióncamaradeportatil/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+        </div>
+        <div class="carousel-item">
+          <img src="../imagenes/Reparacióncamaradeportatil/imagen2.jpeg" class="d-block w-100" alt="Imagen 2">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselcamaraportatil" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselcamaraportatil" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Información del producto -->
+    <div class="card-body">
+      <h5 class="card-title">Reparación de Cámaras<br><br><u>Descripción breve del producto:</u></h5>
+      <p class="card-text">Este servicio da un soporte de cambio de cámara con total fiabilidad.</p>
+      <details>
+        <summary>Seleccionar Modelo</summary>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="boton3">
+            Selecciona tu dispositivo:
+          </button>
+          <ul class="dropdown-menu scrollable-menu">
+            <li><a class="dropdown-item" href="#">Apple MacBook Pro de 16 pulgadas</a></li>
+            <li><a class="dropdown-item" href="#">Apple MacBook Air de 13 pulgadas</a></li>
+            <li><a class="dropdown-item" href="#">Apple MacBook Pro de 14 pulgadas</a></li>
+            <li><a class="dropdown-item" href="#">Apple MacBook Pro de 14 pulgadas con chip M4 Max</a></li>
+            <li><a class="dropdown-item" href="#">Lenovo ThinkPad P1 Gen 6</a></li>
+            <li><a class="dropdown-item" href="#">Dell XPS 17 9730</a></li>
+            <li><a class="dropdown-item" href="#">Asus ROG Strix G16</a></li>
+            <li><a class="dropdown-item" href="#">MSI Creator Z16</a></li>
+          </ul>
+        </div>
+      </details>
+      <br>
+      <p id="precio3"><strong>Precio:</strong></p>
+      <p><strong>Valoración:</strong> ★★★★★</p>
+      <a href="../Pagos/pagoRepararcámaraportátil.html" target="blank"> <button>Comprar Servicio</button></a>
+    </div>
+  </div>
+</div>
+</section>
+</div>
+
+<!-- Script para selección de modelo y precio -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const modelItems = document.querySelectorAll('.dropdown-item');
+    const buttonText = document.getElementById('boton3');
+    const priceElement = document.getElementById('precio3');
+
+    const precios = {
+      'Apple MacBook Pro de 16 pulgadas': '100€',
+      'Apple MacBook Air de 13 pulgadas': '85€',
+      'Apple MacBook Pro de 14 pulgadas': '90€',
+      'Apple MacBook Pro de 14 pulgadas con chip M4 Max': '100€',
+      'Lenovo ThinkPad P1 Gen 6': '95€',
+      'Dell XPS 17 9730': '98€',
+      'Asus ROG Strix G16': '80€',
+      'MSI Creator Z16': '88€'
+    };
+
+    modelItems.forEach(item => {
+      item.addEventListener('click', function (e) {
+        e.preventDefault();
+        const selectedModel = this.textContent;
+        buttonText.textContent = selectedModel;
+        priceElement.textContent = `Precio: ${precios[selectedModel] || 'N/D'}`;
+      });
+    });
+  });
+</script>
+
+  <footer><br>
+    <p><i class="bi bi-c-circle"></i>  2025 ShopiMundo. Todos los derechos reservados.<br>
+    <i class="bi bi-telephone"></i>  924 48 68 59 <br>
+    <i class="bi bi-envelope-at"></i>  shopimundo12@gmail.com<br>
+    <i class="bi bi-instagram"></i>  @shopimundo_</p>
+  </footer>
+
+</body>
+</html>
